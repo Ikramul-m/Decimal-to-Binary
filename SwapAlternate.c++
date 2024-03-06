@@ -23,16 +23,23 @@ void printArray(int arr[], int size)
 int main()
 {
 
-    int even[8] = {5, 2, 9, 4, 7, 6, 1, 0};
-    int odd[5] = {11, 33, 9, 76, 43};
+    int size;
 
-    swapAlternative(even, 8);
-    printArray(even, 8);
+    cout << "Enter the size of the array: ";
+    cin >> size;
+
+    int arr[size];
+
+    for (int i = 0; i < size; i++)
+    {
+        cout << "Enter the element: ";
+        cin >> arr[i];
+    }
+
+    swapAlternative(arr, size);
+    printArray(arr, size);
 
     cout << endl;
-
-    swapAlternative(odd, 5);
-    printArray(odd, 5);
 
     return 0;
 }
