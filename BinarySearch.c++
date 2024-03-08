@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
 
-int binarySearch(int arr[], int key, int n)
+int binarySearch(int arr[], int key, int num)
 {
-    int start = 0, end = n - 1;
+    int start = 0, end = num - 1;
 
     int mid = (start + end) / 2;
 
-    for (; start <= end;)
+    for (; start < end;)
     {
 
         if (arr[mid] == key)
@@ -27,20 +27,20 @@ int binarySearch(int arr[], int key, int n)
         mid = (start + end) / 2;
     }
 
-    return 0;
+    return -1;
 }
 
 int main()
 {
     int n;
-    cout << "Enter a number: ";
+    cout << "Enter the number of elements: ";
     cin >> n;
 
     int arr[n];
 
     for (int i = 0; i < n; i++)
     {
-        cout << "Enter the element: ";
+        cout << "Enter the element at index " << i << ": ";
         cin >> arr[i];
     }
 
@@ -56,10 +56,10 @@ int main()
 
     int r = binarySearch(arr, k, n);
 
-    if (r)
-        cout << r;
+    if (r != -1)
+        cout << "It is present at index: " << r;
     else
-        cout << "Not such element in the array";
+        cout << "No such element in the array";
 
     return 0;
 }
