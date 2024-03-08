@@ -7,7 +7,7 @@ int binarySearch(int arr[], int key, int num)
 
     int mid = (start + end) / 2;
 
-    for (; start < end;)
+    for (; start <= end;)
     {
 
         if (arr[mid] == key)
@@ -47,7 +47,7 @@ int main()
     cout << "Array is: ";
     for (int j = 0; j < n; j++)
     {
-        cout << arr[j] << " ";
+        cout << arr[j] << "     ";
     }
 
     int k;
@@ -57,7 +57,7 @@ int main()
     int r = binarySearch(arr, k, n);
 
     if (r != -1)
-        cout << "It is present at index: " << r;
+        cout << "It is present at Index -> " << r;
     else
         cout << "No such element in the array";
 
